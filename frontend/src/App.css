@@ -1,0 +1,40 @@
+/*Page headings*/
+.heading {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  text-align: center;
+}
+
+/*Expo List*/
+.exhibitor-logo {
+  height: 300px;
+  max-width: 200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/*Modal Content*/
+.modal-logo {
+  max-width: 100%;
+}
+
+.modal-button {
+  width: 100%;
+}
+
+.booth-logo {
+  height: 100px;
+  max-width: 200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/*Buttons*/
+
+button {
+  margin-bottom: 1rem!important;
+}
