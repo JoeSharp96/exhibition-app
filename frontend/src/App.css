@@ -5,7 +5,7 @@
   margin-bottom: 1rem;
 }
 
-.title {
+.title, .subtitle {
   text-align: center;
 }
 
@@ -37,4 +37,40 @@
 
 button {
   margin-bottom: 1rem!important;
+}
+
+/*  Home  */
+/*  Hero Section  */
+.hero {
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  background-color: #076ae0;
+  color: white;
+}
+
+.hero-logo {
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.hero-button {
+  background-color: #DEAC52;
+  padding: 8px 16px;
+  border: 2px white solid;
+  border-radius: 5px;
+  color: white;
+  width: 100%;
+}
+
+.cta-btn {
+  justify-content: center;
+}
+
+.hero-button:hover {
+  transition: 100ms;
+  background-color: #916719;
+  padding: 7px 15px;
+  border: 3px white solid;
+
 }

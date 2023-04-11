@@ -8,11 +8,13 @@ function Header() {
     let location = useLocation();
 
     return (
-        <Navbar bg='dark' variant='dark'>
+        <Navbar bg='light' variant='light'>
             <Container>
-                <Navbar.Brand>Virtual Expo App</Navbar.Brand>
+                <Navbar.Brand href='/' className='me-5'>
+                    <img alt="" src='/Exhibitr-logos_black_blue_transparent_v2.png' width="100" />
+                </Navbar.Brand>
                 <Nav className='me-auto' activeKey={location.pathname}>
-                    <Nav.Link href='/'>Virtual Exhibition</Nav.Link>
+                    <Nav.Link href='/exhibition'>Virtual Exhibition</Nav.Link>
                     <Nav.Link href='/exhibitor-center'>Exhibitor Center</Nav.Link>
                 </Nav>
             </Container>

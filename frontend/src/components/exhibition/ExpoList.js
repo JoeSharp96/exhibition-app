@@ -12,7 +12,6 @@ function ExpoList(props) {
     const getNum = (event) => {
         event.preventDefault();
         let i;
-        console.log(event.target)
         const classNames = event.target.classList;
         for (let x = 0; x < event.target.classList.length; x++) {
             if (classNames[x] === "exhibitor-logo") {
