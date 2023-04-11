@@ -11,7 +11,17 @@ function ExpoList(props) {
     const [exhibitor, setExhibitor] = useState();
     const getNum = (event) => {
         event.preventDefault();
-        const i = event.target.parentElement.parentElement.id
+        let i;
+        console.log(event.target)
+        const classNames = event.target.classList;
+        for (let x = 0; x < event.target.classList.length; x++) {
+            if (classNames[x] === "exhibitor-logo") {
+                i = event.target.parentElement.id;
+                break;
+            } else {
+                i = event.target.parentElement.parentElement.id;
+            }
+        }
         setExhibitor(props.exhibitors[i])
         handleOpen();
     }
@@ -55,13 +65,13 @@ function ExpoList(props) {
         return (
             <Col lg={3} key={exhibitor.boothNumber} className="mb-3">
                 <Card id={index}>
-                    <div className="exhibitor-logo d-flex">
-                        <Card.Img variant="top" src={exhibitor.logoUrl} alt="Logo"/>
+                    <div className="exhibitor-logo d-flex" onClick={getNum}>
+                        <Card.Img className="px-1" variant="top" src={exhibitor.logoUrl} alt="Logo"/>
                     </div>
                     <Card.Body>
                         <Card.Title>{exhibitor.boothTitle}</Card.Title>
                         <Card.Text>Booth: {exhibitor.boothNumber}</Card.Text>
-                        <Button variant="primary" onClick={getNum}>View Booth</Button>
+                        <Button className="view-booth" variant="primary" onClick={getNum}>View Booth</Button>
                     </Card.Body>
                 </Card>
             </Col>
@@ -78,8 +88,8 @@ function ExpoList(props) {
                     {exhibitorList}
                 </Row>
                 <Modal show={show} onHide={handleClose} size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered>
+                aria-labelledby="contained-modal-title-vcenter"
+                centered>
                     <ModalContent exhibitor={exhibitor} />
                 </Modal>
             </section>

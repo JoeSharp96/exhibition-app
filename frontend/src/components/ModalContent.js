@@ -7,7 +7,7 @@ function ModalContent(props) {
     return (
         <>
             <Modal.Body>
-                <Row>
+                <Row className='mb-3'>
                     <Col lg={3}>
                         <div className='booth-logo d-flex'>
                             <img className='modal-logo' src={exhibitor.logoUrl} alt="Logo"></img>
