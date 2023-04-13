@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow');
+/*  Body  */
+body {
+  font-family: 'Barlow';
+}
+
+/*  header  */
+nav {
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+/*  Main  */
+main {
+  padding-top: 102px;
+}
+
 /*Page headings*/
 .heading {
   padding-top: 2rem;
@@ -7,6 +23,14 @@
 
 .title, .subtitle {
   text-align: center;
+}
+
+/*  Section Headline  */
+.headline {
+  max-width: 800px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: 1rem auto;
 }
 
 /*Expo List*/
@@ -54,23 +78,72 @@ button {
   margin: 0 auto;
 }
 
+/*  Hero Buttons  */
+.cta-btn {
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
+}
+
+.button {
+  min-width: 150px;
+}
+
 .hero-button {
-  background-color: #DEAC52;
-  padding: 8px 16px;
-  border: 2px white solid;
-  border-radius: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   color: white;
+  text-decoration: none;
+  border: 2px white solid;
+  border-radius: 50px;
+  transition: 100ms;
   width: 100%;
 }
 
-.cta-btn {
-  justify-content: center;
-}
-
 .hero-button:hover {
-  transition: 100ms;
-  background-color: #916719;
-  padding: 7px 15px;
-  border: 3px white solid;
-
+  transform: scale(1.05);
+  color: white;
 }
+
+.primary-btn {
+  background-color: #DEAC52;
+}
+
+.primary-btn:hover {
+  background-color: #916719;
+}
+
+/*  Key Theme   */
+
+.kf-content {
+  border: 1px solid #acacac;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.kf-content a {
+  text-decoration: none;
+  display: inline-block;
+  color:#076ae0;
+  transition: all 100ms ease;
+  
+}
+
+.kf-content a:hover {
+  color: #065bc4;
+  transform: scale(1.02);
+}
+
+/*  Adds gutters to key themes  */
+@media only screen and (min-width: 768px) {
+  .key-themes {
+    justify-content: space-between;
+  }
+  
+  .kf-content {
+    max-width: 32%!important;
+  }
+}
+
+
+

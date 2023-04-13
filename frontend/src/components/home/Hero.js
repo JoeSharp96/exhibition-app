@@ -1,4 +1,4 @@
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 function Hero() {
 
@@ -9,11 +9,11 @@ function Hero() {
             </div>
             <h3 className="subtitle mb-3">Join the virtual exhibition</h3>
             <Row className="d-flex cta-btn">
-                <Col>
-                    <a className="hero-button primary" href="/exhibition">View Exhibitors</a>
+                <Col className="button d-flex">
+                    <a className="hero-button primary-btn mx-1"href="/exhibition">View Exhibitors</a>
                 </Col>
-                <Col>
-                    <a className="hero-button secondary" href="/exhibitor-center">Login</a>
+                <Col className="button d-flex">
+                    <a className="hero-button secondary-btn mx-1" href="/exhibitor-center">Login</a>
                 </Col>
             </Row>
         </div>

@@ -8,7 +8,7 @@ function Header() {
     let location = useLocation();
 
     return (
-        <Navbar bg='light' variant='light'>
+        <Navbar bg='light' variant='light' fixed='top'>
             <Container>
                 <Navbar.Brand href='/' className='me-5'>
                     <img alt="" src='/Exhibitr-logos_black_blue_transparent_v2.png' width="100" />
