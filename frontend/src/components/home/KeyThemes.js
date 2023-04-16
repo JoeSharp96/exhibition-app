@@ -31,7 +31,7 @@ function KeyThemes() {
 
     const themes = content.map((theme, index) => {
         return(
-            <Col key={index} id={index} md={4} className="kf-content m-1">
+            <Col key={index} id={index} md={4} className="kf-content">
                 <div className="p-4">
                     <Row>
                         <Col sm={1}>
@@ -56,7 +56,7 @@ function KeyThemes() {
                 Get them by having a silly little booth. You know, like a real booth, but it's all fake. Like
                 Santa Claus or the Queen</h4>
             </div>
-            <Row className="gx-4 key-themes">
+            <Row className="key-themes">
                 {themes}
             </Row>
         </Container>    
