@@ -22,7 +22,6 @@ async function getJWT(req, res, next) {
         };
     };
     if (req.jwt) {
-        token = req.jwt;
         next();
     } else {
         res.status(404).send({message: "Either the username or password were entered incorrectly"});
@@ -32,6 +31,7 @@ async function getJWT(req, res, next) {
 
 // Checks if JWT token is valid
 function checkJWTToken(req, res, next) {
+    const token = req.cookies.token
     if (token) {
         jwt.verify(token, "secretKey", function(error, data) {
             if (error) {
@@ -112,13 +112,6 @@ function getPublishedLogos(req,res,next) {
     })
     next();
 }
-
-// Clear JWT
-function clearJWT(req, res, next) {
-    token = undefined;
-    next();
-}
-
 module.exports = {
     checkUsername,
     passwordVerification,
@@ -126,6 +119,5 @@ module.exports = {
     checkJWTToken,
     getBooth,
     getPublishedList,
-    clearJWT,
     getPublishedLogos
 }

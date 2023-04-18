@@ -13,7 +13,6 @@ function LogoMarquee() {
         });
 
         const data = await response.json();
-        console.log(data)
         const logoList = data.map((logo, index) => {
             return(
                 <img key={index} src={logo.logoUrl} height={100} alt={logo.boothTitle} />

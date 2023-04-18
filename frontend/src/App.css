@@ -6,7 +6,6 @@ nav {
 /*  Main  */
 main {
   padding-top: 102px;
-  background-color: #f8f9fa;
 }
 
 /*Page headings*/
@@ -233,4 +232,23 @@ button {
   margin-left: .75rem;
   margin-right: .75rem;
   max-width: 275px;
+}
+
+/*  Login Page  */
+.login-module {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  border: 1px solid #acacac;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.login-module form {
+  width: 100%;
+}
+
+.alt-bg {
+	background: linear-gradient(0deg, rgba(7,86,181,1) 0%, rgba(7,106,224,1) 75%);
+  min-height: 92.22vh;
 }
