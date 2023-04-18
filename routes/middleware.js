@@ -95,9 +95,22 @@ async function getPublishedList(req, res, next) {
     const boothData = exhibitors.map((exhibitor) => {
         return exhibitor.booth;
     });
-    console.log(boothData);
     req.booths = boothData;
     next()
+}
+
+// Creates list of all published logos
+function getPublishedLogos(req,res,next) {
+    const exhibitorList = req.booths;
+    req.logos = exhibitorList.map((booth) => {
+        return(
+            {
+                boothTitle: booth.boothTitle,
+                logoUrl: booth.logoUrl
+            }
+        )
+    })
+    next();
 }
 
 // Clear JWT
@@ -113,5 +126,6 @@ module.exports = {
     checkJWTToken,
     getBooth,
     getPublishedList,
-    clearJWT
+    clearJWT,
+    getPublishedLogos
 }

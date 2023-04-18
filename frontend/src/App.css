@@ -224,5 +224,13 @@ button {
 
 .content-button:hover{
   transform: scale(1.02);
-  color:#076ae0;
+  color:#f8f9fa;
+  background-color: #076ae0;
+}
+
+/*  Logo marquee  */
+.logo-marquee img{
+  margin-left: .75rem;
+  margin-right: .75rem;
+  max-width: 275px;
 }
