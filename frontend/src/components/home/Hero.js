@@ -13,7 +13,7 @@ function Hero() {
                     <a className="hero-button primary-btn mx-1"href="/exhibition">View Exhibitors</a>
                 </Col>
                 <Col className="button d-flex">
-                    <a className="hero-button secondary-btn mx-1" href="/exhibitor-center">Login</a>
+                    <a className="hero-button secondary-btn mx-1" href="/login">Login</a>
                 </Col>
             </Row>
         </div>

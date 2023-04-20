@@ -25,6 +25,16 @@ function Booth() {
         getContent();
     }, [])
 
+    // Logout (I'm going to be using something like this a lot, maybe move this into a shared js function file?)
+    const logOut = async () => {
+        await fetch('/login/logout', {
+            method: "GET",
+            headers: { "Content-Type": "application/json"}
+        })
+        localStorage.removeItem('isLoggedIn');
+        window.location.replace('/login');
+    }
+
     // Get exhibitor form content
     const getContent = async () => {
         const response = await fetch('/exhibition-booths/edit', {
@@ -33,8 +43,12 @@ function Booth() {
         })
 
         const data = await response.json();
-        setBoothContent(data);
-        setLoading(false);
+        if (response.status === 403) {
+            logOut();
+        } else {
+            setBoothContent(data);
+            setLoading(false);
+        }
     };
 
     if (isLoading) {

@@ -12,7 +12,6 @@ router.post('/', getJWT, function(req, res) {
 // User logout
 router.get('/logout', function(req, res) {
     res.clearCookie('token');
-    console.log("working");
     res.end();
 }), 
 
