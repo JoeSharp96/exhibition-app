@@ -1,4 +1,4 @@
-import { Row, Col, Container, Carousel } from "react-bootstrap";
+import { Container, Carousel } from "react-bootstrap";
 
 function Slider() {
     return(

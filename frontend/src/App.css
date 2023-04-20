@@ -252,3 +252,9 @@ button {
 	background: linear-gradient(0deg, rgba(7,86,181,1) 0%, rgba(7,106,224,1) 75%);
   min-height: 92.22vh;
 }
+
+
+/*  404 */
+.not-found-body {
+  text-align: center;
+}

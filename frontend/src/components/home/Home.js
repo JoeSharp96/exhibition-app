@@ -1,4 +1,3 @@
-import { Container } from "react-bootstrap";
 import Hero from "./Hero";
 import KeyThemes from "./KeyThemes";
 import Slider from "./Slider";

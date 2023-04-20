@@ -1,3 +1,4 @@
+import NotFound from "./NotFound";
 import Expo from "./exhibition/Expo";
 import Login from "./exhibitors/login/Login";
 import Booth from "./exhibitors/profile/Booth";
@@ -16,6 +17,7 @@ function Content() {
             <Route exact path="/exhibition" element={<Expo />} />
             <Route exact path="/login" element={ !loggedIn ? (<Login />) : (<Navigate replace to={"/booth"} />)} />
             <Route exact path="/booth" element={<Booth />} />
+            <Route path="*" element={<NotFound />} />
         </Routes>
     );
 };

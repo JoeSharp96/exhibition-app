@@ -1,8 +1,14 @@
-import { Nav, Navbar, Container, Button } from 'react-bootstrap';
+import { useState } from 'react';
+import { Nav, Navbar, Container, Button, Offcanvas } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 
 function Header() {
     // Location object used to set active page in nav
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     let location = useLocation();
 
     const loggedInObj = JSON.parse(localStorage.getItem("isLoggedIn"));
@@ -44,7 +50,8 @@ function Header() {
         );
     } else {
         return (
-            <Navbar bg='light' variant='light' fixed='top'>
+            <>
+            <Navbar bg='light' variant='light' fixed='top' className='.d-md-none .d-lg-block'>
                 <Container>
                     <Navbar.Brand href='/' className='me-5'>
                         <img alt="" src='/Exhibitr-logos_black_blue_transparent_v2.png' width="100" />
@@ -55,6 +62,24 @@ function Header() {
                     </Nav>
                 </Container>
             </Navbar>
+            <Navbar bg='light' variant='light' fixed='top' className='d-md-none'>
+                <Container>
+                    <Navbar.Brand href='/' className='me-5'>
+                        <img alt="" src='/Exhibitr-logos_black_blue_transparent_v2.png' width="100" />
+                    </Navbar.Brand>
+                    <Button variant='primary' onClick={handleShow}>Menu</Button>
+                        <Offcanvas show={show} onHide={handleClose} responsive='md'>
+                            <Offcanvas.Header closeButton />
+                            <Offcanvas.Body>
+                                <Nav className='me-auto' activeKey={location.pathname}>
+                                    <Nav.Link href='/exhibition'>Virtual Exhibition</Nav.Link>
+                                    <Nav.Link href='/login'>Exhibitor Center</Nav.Link>
+                                </Nav>
+                            </Offcanvas.Body>
+                        </Offcanvas>
+                </Container>
+            </Navbar>
+        </>
         )
     }
 };
