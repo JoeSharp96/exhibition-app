@@ -212,19 +212,20 @@ button {
 .content-button {
   padding-top: 2px;
   padding-bottom: 2px;
-  color: #076ae0;
+  color: #076ae0!important;
   text-decoration: none;
   border: 2px #076ae0 solid;
   border-radius: 50px;
   transition: 100ms;
-  width: 200px;
+  min-width: 200px;
   text-align: center;
 }
 
 .content-button:hover{
   transform: scale(1.02);
-  color:#f8f9fa;
+  color:#f8f9fa!important;
   background-color: #076ae0;
+  cursor: pointer;
 }
 
 /*  Logo marquee  */

@@ -12,7 +12,7 @@ function Testimonial() {
                         <li>Easy-to-use mobile app provides wayfinding, matchmaking, and personalized event scheduling</li>
                     </ul>
                     <div className="button d-flex">
-                        <a className="content-button tertiary-btn mx-1"href="/exhibition">View Exhibitors</a>
+                        <a className="content-button tertiary-btn mx-1" href="/exhibition">View Exhibitors</a>
                     </div>
                 </Col>
                 <Col lg={6} className="testimonial d-flex">

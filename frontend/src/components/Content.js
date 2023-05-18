@@ -16,7 +16,7 @@ function Content() {
             <Route exact path="/" element={<Home />} />
             <Route exact path="/exhibition" element={<Expo />} />
             <Route exact path="/login" element={ !loggedIn ? (<Login />) : (<Navigate replace to={"/booth"} />)} />
-            <Route exact path="/booth" element={<Booth />} />
+            <Route exact path="/booth" element={ loggedIn ? (<Booth />) : (<Navigate replace to={"/login"} />)} />
             <Route path="*" element={<NotFound />} />
         </Routes>
     );
